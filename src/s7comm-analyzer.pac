@@ -50,7 +50,7 @@ flow S7comm_Flow(is_orig: bool) {
             if (${s7comm_data.data[0]} != S7_HEADER) {
                 return false;
                 }
-            connection()->zeek_analyzer()->ProtocolConfirmation();
+            // connection()->zeek_analyzer()->ProtocolConfirmation();
             zeek::BifEvent::enqueue_s7comm_data(connection()->zeek_analyzer(),
                                                 connection()->zeek_analyzer()->Conn(),
                                                 is_orig(),
